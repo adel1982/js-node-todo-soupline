@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="fr")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Todo App
+		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css")
+		link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.5.0/css/all.css")
+	body
+		nav.navbar.bg-dark.navbar-dark.mb-4
+			.container
+				a(href="/").navbar-brand Todo App
+		.container
+			.row
+				.col-md-4
+					.card
+						.card-header
+							h5 Ajouter une tâche
+						.card-body
+							form(action="")
+								.form-group
+									label(for="todo") Ajouter une tâche:
+									input(type="text", id="todo").form-control
+								button(type="submit").btn.btn-success 
+									i.fas.fa-plus.pr-1
+									b Ajouter
+				.col-md-8
+					table.table.table-striped
+						thead
+							tr
+								th(scope='col') #
+								th(scope='col') First
+								th(scope='col') Last
+								th(scope='col') Handle
+						tbody
+							tr
+								th(scope='row') 1
+								td Mark
+								td Otto
+								td @mdo
+							tr
+								th(scope='row') 2
+								td Jacob
+								td Thornton
+								td @fat
+							tr
+								th(scope='row') 3
+								td Larry
+								td the Bird
+								td @twitter
