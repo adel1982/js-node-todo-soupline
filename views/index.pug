@@ -18,10 +18,10 @@ html(lang="fr")
 						.card-header
 							h5 Ajouter une tâche
 						.card-body
-							form(action="")
+							form(action="/add", method="POST")
 								.form-group
 									label(for="todo") Ajouter une tâche:
-									input(type="text", id="todo").form-control
+									input(type="text", id="todo", name="title").form-control
 								button(type="submit").btn.btn-success 
 									i.fas.fa-plus.pr-1
 									b Ajouter
@@ -29,23 +29,16 @@ html(lang="fr")
 					table.table.table-striped
 						thead
 							tr
-								th(scope='col') #
-								th(scope='col') First
-								th(scope='col') Last
-								th(scope='col') Handle
+								th(scope='col') Todo
+								th(scope='col') Editer
+								th(scope='col') Supprimer
 						tbody
-							tr
-								th(scope='row') 1
-								td Mark
-								td Otto
-								td @mdo
-							tr
-								th(scope='row') 2
-								td Jacob
-								td Thornton
-								td @fat
-							tr
-								th(scope='row') 3
-								td Larry
-								td the Bird
-								td @twitter
+							each todo in todos
+								tr
+									th(scope='row')= todo.title
+									th
+										button.btn.btn-info.btn-sm
+											i.fas.fa-pencil-alt
+									th
+										button.btn.btn-danger.btn-sm
+											i.fas.fa-trash-alt
