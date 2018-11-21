@@ -35,10 +35,11 @@ html(lang="fr")
 						tbody
 							each todo in todos
 								tr
-									th(scope='row')= todo.title
-									th
-										button.btn.btn-info.btn-sm
+									td(scope='row')= todo.title
+									td
+										a(href="/update/" + todo.id).btn.btn-info.btn-sm
 											i.fas.fa-pencil-alt
-									th
-										button.btn.btn-danger.btn-sm
-											i.fas.fa-trash-alt
+									td
+										form(method="POST", action="/delete/" + todo.id + "?_method=DELETE")
+											button(type="submit").btn.btn-danger.btn-sm
+												i.fas.fa-trash-alt
