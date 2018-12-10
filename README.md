@@ -5,4 +5,3 @@ Aide mémoire
 - HTML / CSS / JS
 - Node JS 
 
-## Updates à faire 
