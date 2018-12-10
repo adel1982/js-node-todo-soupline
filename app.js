@@ -24,5 +24,5 @@ app.use(methodOverride('_method'));
 const index = require('./routes/index');
 app.use('/', index);
 
-const port = 4000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Serveur lancé sur le port ${port}`));
