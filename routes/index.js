@@ -7,4 +7,6 @@ router.get('/', indexController.getIndex);
 
 router.post('/ajouter', indexController.postIndex);
 
+router.delete('/supprimer/:id', indexController.deleteIndex);
+
 module.exports = router;

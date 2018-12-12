@@ -18,10 +18,10 @@ block content
 			table.table.table-striped
 				thead
 					tr
-						th(scope='col') ID
-						th(scope='col') Todo
-						th(scope='col') Editer
-						th(scope='col') Supprimer
+						th(scope="col") ID
+						th(scope="col") Todo
+						th(scope="col") Editer
+						th(scope="col") Supprimer
 				tbody
 					each todo in todos
 						tr
@@ -31,5 +31,6 @@ block content
 								button.btn.btn-info.btn-sm
 									i.fas.fa-pencil-alt
 							td
-								button.btn.btn-danger.btn-sm
-									i.fas.fa-trash-alt
+								form(method="POST", action="/supprimer/" + todo.id + "?_method=DELETE")
+									button(type="submit").btn.btn-danger.btn-sm
+										i.fas.fa-trash-alt
