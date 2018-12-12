@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	.row
+		.col-md-4
+			.card
+				.card-header
+					h3 Editer la tâche 
+				.card-body
+					form(method="POST", action="/editer/" + todo.id + "?_method=PUT" )
+						.form-group
+							label(for="todo") Editer une tâche:
+							input.form-control#todo(type='text', name='title', value=todo.title)
+						button(type="submit", value="Editer").btn.btn-primary.btn-block 
+							| Editer 
+							i.fas.fa-pencil-alt

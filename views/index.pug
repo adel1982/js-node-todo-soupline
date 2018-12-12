@@ -28,7 +28,7 @@ block content
 							th(scope='row')= todo.id
 							td= todo.title
 							td
-								button.btn.btn-info.btn-sm
+								a(href="/editer/" + todo.id).btn.btn-info.btn-sm
 									i.fas.fa-pencil-alt
 							td
 								form(method="POST", action="/supprimer/" + todo.id + "?_method=DELETE")
