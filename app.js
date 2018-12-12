@@ -1,7 +1,7 @@
 const express 				= require('express');
 const mongoose 				= require('mongoose');
 const bodyParser 			= require('body-parser');
-// const methodOverride 	= require('method-override')
+const methodOverride 	= require('method-override')
 
 
 // Connect to Database
@@ -13,7 +13,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'pug');
 
