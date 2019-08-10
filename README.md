@@ -1,4 +1,4 @@
-# To-Do list application
+# To-Do list application 
 
 ## Used Technologys
 - HTML / CSS / JS Vanilla
